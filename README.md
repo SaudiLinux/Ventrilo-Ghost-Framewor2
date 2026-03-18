@@ -1,67 +1,43 @@
-python3 --version && pip3 --version && git --version
+# <div align="center"><font color="#007bff">Ventrilo-Ghost Framework 🛡️💀</font></div>
 
+<div align="center">
+  <h3><b>النظام الاستخباراتي الهجومي المتكامل لاختبار الاختراق (v2.5.0-GodMode)</b></h3>
+  <p>
+    <b>Developed by:</b> <font color="blue" size="5"><b>SayerLinux</b></font><br>
+    <b>Email:</b> <a mailto:href="mailto:SaudiLinux1@gmail.com"><font color="blue">mailto:SaudiLinux1@gmail.com</font></a>
+  </p>
+  <img src="https://img.shields.io/badge/Developer-SayerLinux-blue?style=for-the-badge&logo=linux" alt="Developer Badge">
+  <img src="https://img.shields.io/badge/OS-Kali_Linux_Compatible-red?style=for-the-badge&logo=kali-linux" alt="OS Badge">
+  <img src="https://img.shields.io/badge/Version-2.5.0--GodMode-green?style=for-the-badge" alt="Version Badge">
+  <img src="https://img.shields.io/badge/Maintained-Yes-brightgreen?style=for-the-badge" alt="Maintained Badge">
+</div>
 
-⚡ خطوات التثبيت السريع (Quick Installation)
+---
 
-1. تحميل المستودع (Clone)
+## 🚀 نظرة عامة (Overview)
 
-افتح الـ Terminal وقم بتحميل المشروع من GitHub:
+**Ventrilo-Ghost** هو إطار عمل احترافي صممه المطور **SayerLinux** لعمليات Red Teaming والاستطلاع الاستخباراتي العميق. تم تطوير هذا الإصدار (v2.5.0) ليكون نظاماً مستقلاً قادراً على تنفيذ عمليات "Auto-Pwn" الآلية، وتجاوز جدران الحماية (WAF Bypass) باستخدام الذكاء الاصطناعي، وإدارة العمليات عبر لوحة تحكم مركزية (C2 Dashboard).
 
+---
 
-git clone https://github.com/SaudiLinux/Ventrilo-Ghost-Framework.git
-cd Ventrilo-Ghost-Framework
+## 💎 المميزات الاستثنائية (Ultimate Features)
 
-2. التشغيل الآلي للمثبت (The Auto-Installer)
+- **☢️ Auto-Pwn Chain:** تنفيذ دورة هجومية كاملة (استطلاع، زحف، استغلال) تلقائياً بضغطة زر.
+- **🤖 AI Payload Mutation:** تجاوز أنظمة الحماية الذكية (WAF) عبر تحوير الحمولات بالذكاء الاصطناعي.
+- **🛡️ Ghost Encryptor:** تشفير عسكري للبيانات المستخرجة (AES-256) مع ميزة مسح الأثر الجنائي (Anti-Forensics).
+- **🕸️ Deep Spidering:** محرك زحف غير متزامن فائق السرعة لاكتشاف كافة الروابط والمجلدات المخفية.
+- **📡 OSINT & Subdomains:** محرك استخباراتي لاكتشاف النطاقات الفرعية (Subdomains) المرتبطة بالهدف.
+- **🖥️ Ghost C2 Dashboard:** واجهة ويب احترافية (Terminal-Style) لإدارة السيرفرات المخترقة وتنفيذ الأوامر لحظياً.
 
-لقد قمنا ببرمجة ملف setup.py ليقوم بكافة المهام الصعبة نيابة عنك (تثبيت المكتبات، إنشاء المجلدات، وتهيئة الحزم):
+---
 
+## 🛠️ هيكل المشروع (Project Structure)
 
-python3 setup.py
-
-سيقوم السكربت بتثبيت requests, aiohttp, flask, cryptography, و colorama تلقائياً.
-
-
-
-🚀 كيفية التشغيل (Execution)
-
-تشغيل المحرك الرئيسي (Master Controller)
-
-للوصول لكافة ميزات الفحص، الاستغلال، والتحكم الآلي (Auto-Pwn):
-
-
-python3 main.py
-
-تشغيل لوحة التحكم المركزية (C2 Dashboard)
-
-إذا كنت تود تشغيل واجهة الويب فقط لإدارة السيرفرات المتصلة:
-
-
-cd c2_server
-python3 app.py
-
-افتح المتصفح على العنوان: http://localhost:5000
-
-
-
-🛠️ حل المشاكل الشائعة (Troubleshooting)
-
-1. خطأ "ModuleNotFoundError"
-
-إذا واجهت هذا الخطأ، تأكد من أنك قمت بتشغيل setup.py أولاً، أو قم بتثبيت المكتبات يدوياً:
-
-
-pip3 install -r requirements.txt
-
-2. صلاحيات التنفيذ (Permissions)
-
-في بعض أنظمة Linux، قد تحتاج لإعطاء صلاحيات للمجلدات:
-
-
-chmod +x main.py setup.py c2_server/app.py
-
-3. تعارض المنفذ 5000 (Port Conflict)
-
-إذا كانت لوحة التحكم لا تعمل، تأكد من عدم وجود برنامج آخر يستخدم المنفذ 5000:
-
-
-fuser -k 5000/tcp
+```text
+Ventrilo-Ghost-Framework/
+├── core/                 # محركات الفحص والاستغلال والذكاء الاصطناعي
+├── c2_server/            # مركز القيادة والسيطرة (Command & Control)
+├── agent/                # العميل الشبح للبقاء والسيطرة (Persistence)
+├── main.py               # المحرك الرئيسي (Master Controller)
+├── setup.py              # المثبت التلقائي والمهيئ لبيئة العمل
+└── requirements.txt      # المكتبات المطلوبة للتشغيل
